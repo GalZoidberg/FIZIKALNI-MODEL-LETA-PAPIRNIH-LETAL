@@ -1,0 +1,191 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6936,        183]
+NotebookOptionsPosition[      6205,        161]
+NotebookOutlinePosition[      6632,        178]
+CellTagsIndexPosition[      6589,        175]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Show", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Graphics", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"RGBColor", "[", 
+        RowBox[{"0", ",", "1", ",", "1", ",", "0"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"EdgeForm", "[", "Thin", "]"}], ",", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Polygon", "[", 
+        RowBox[{"2", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", 
+              FractionBox[
+               SqrtBox["3"], "2"]}], ",", 
+             RowBox[{"-", 
+              FractionBox["1", "2"]}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             FractionBox[
+              SqrtBox["3"], "2"], ",", 
+             RowBox[{"-", 
+              FractionBox["1", "2"]}]}], "}"}]}], "\[IndentingNewLine]", 
+          "}"}]}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Graphics", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"RGBColor", "[", 
+        RowBox[{"0", ",", "1", ",", "1", ",", "0"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"EdgeForm", "[", "Thin", "]"}], ",", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Polygon", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"-", "1"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              SqrtBox["3"], "2"]}], ",", 
+            FractionBox["1", "2"]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            FractionBox[
+             SqrtBox["3"], "2"], ",", 
+            FractionBox["1", "2"]}], "}"}]}], "\[IndentingNewLine]", "}"}], 
+        "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Graphics", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"RGBColor", "[", 
+          RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "]"}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"Disk", "[", 
+          RowBox[{"#", ",", ".003"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+       "]"}], "&"}], "/@", 
+     RowBox[{"(", 
+      RowBox[{".6", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", "1"}]}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox[
+             SqrtBox["3"], "2"]}], ",", 
+           FractionBox["1", "2"]}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           FractionBox[
+            SqrtBox["3"], "2"], ",", 
+           FractionBox["1", "2"]}], "}"}]}], "\[IndentingNewLine]", "}"}]}], 
+      ")"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"Boxed", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.82292676130589*^9, 3.822926762629504*^9}, {
+  3.8229267939284344`*^9, 3.822926857018939*^9}, {3.8229270590764112`*^9, 
+  3.822927184676013*^9}, {3.8229272624366875`*^9, 3.822927293107273*^9}, {
+  3.8229273270081987`*^9, 3.8229275179375267`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"5751c042-5860-4f16-a17f-2ab7ce3e670b"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0, 1, 1], Opacity[0], EdgeForm[Thickness[Tiny]], 
+    PolygonBox[
+     NCache[{{0, 2}, {-3^Rational[1, 2], -1}, {3^Rational[1, 2], -1}}, {{0, 
+       2}, {-1.7320508075688772`, -1}, {1.7320508075688772`, -1}}]]}, 
+   {RGBColor[0, 1, 1], Opacity[0], EdgeForm[Thickness[Tiny]], 
+    PolygonBox[
+     NCache[{{0, -1}, {Rational[-1, 2] 3^Rational[1, 2], Rational[1, 2]}, {
+       Rational[1, 2] 3^Rational[1, 2], Rational[1, 2]}}, {{
+       0, -1}, {-0.8660254037844386, 0.5}, {0.8660254037844386, 0.5}}]]}, 
+   {RGBColor[0, 0, 0], Opacity[1], DiskBox[{0., -0.6}, 0.003]}, 
+   {RGBColor[0, 0, 0], Opacity[1], 
+    DiskBox[{-0.5196152422706631, 0.3}, 0.003]}, 
+   {RGBColor[0, 0, 0], Opacity[1], DiskBox[{0.5196152422706631, 0.3}, 0.003]}},
+  Boxed -> False,
+  ImageSize->{441., Automatic}]], "Output",
+ CellChangeTimes->{{3.8229270895023394`*^9, 3.8229271041055703`*^9}, {
+   3.822927167929922*^9, 3.8229271851190796`*^9}, {3.822927316515315*^9, 
+   3.8229274013888474`*^9}, {3.8229274558802147`*^9, 3.8229275197714663`*^9}, 
+   3.8229304242644367`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"17240d24-b40c-4f08-959d-ef30dbea6722"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<c:\\\\Users\\\\gal\\\\Downloads\\\\tetraeder.svg\>\"", ",", "%"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8229276595380487`*^9, 3.822927672868449*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"dd1e8465-d974-441c-b62b-d748e4fac3dc"],
+
+Cell[BoxData["\<\"c:\\\\Users\\\\gal\\\\Downloads\\\\tetraeder.svg\"\>"], \
+"Output",
+ CellChangeTimes->{3.8229276771323586`*^9, 3.822930429884531*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"9013f34f-adb8-4587-9369-5d61a67f4b71"]
+}, Open  ]]
+},
+WindowSize->{1064, 1021},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 9, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e524eab5-17fb-460f-bc49-cb6f83b6fbe7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3879, 97, 1641, "Input",ExpressionUUID->"5751c042-5860-4f16-a17f-2ab7ce3e670b"],
+Cell[4462, 121, 1169, 21, 601, "Output",ExpressionUUID->"17240d24-b40c-4f08-959d-ef30dbea6722"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5668, 147, 289, 6, 43, "Input",ExpressionUUID->"dd1e8465-d974-441c-b62b-d748e4fac3dc"],
+Cell[5960, 155, 229, 3, 49, "Output",ExpressionUUID->"9013f34f-adb8-4587-9369-5d61a67f4b71"]
+}, Open  ]]
+}
+]
+*)
+
