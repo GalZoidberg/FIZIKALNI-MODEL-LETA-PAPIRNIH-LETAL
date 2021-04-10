@@ -1,0 +1,420 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17196,        412]
+NotebookOptionsPosition[     16169,        386]
+NotebookOutlinePosition[     16568,        402]
+CellTagsIndexPosition[     16525,        399]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dc", "=", 
+   FractionBox["1", "20"]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"\[Delta]x", "=", ".08"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"\[Delta]y", "=", ".05"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"vel\[CHacek]rk", "=", "193.5"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"razmik", "=", ".3"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"debelina", "=", ".005"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"velpu\[SHacek]", "=", ".03"}], ";"}], "\n", "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"grafika", "=", 
+   RowBox[{"Show", "[", "\n", " ", "\n", 
+    RowBox[{
+     RowBox[{"Table", "[", "\n", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"barva", " ", "=", " ", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"IntegerQ", "[", 
+            RowBox[{
+             RowBox[{"Round", "[", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"c1", " ", "+", " ", "c2"}], ")"}], "/", "dc"}], 
+              "]"}], "/", "2"}], "]"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", " ", "1", ",", " ", "1"}], "}"}]}], "]"}]}], 
+        ";", "\n", " ", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", "  ", "\n", "   ", 
+          RowBox[{
+           RowBox[{"RGBColor", "[", "barva", "]"}], ",", "  ", "\n", "   ", 
+           RowBox[{"EdgeForm", "[", "]"}], ",", "\n", "   ", 
+           RowBox[{"Polygon", "[", 
+            RowBox[{"{", "\n", "     ", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"c1", ",", " ", "c2"}], "}"}], ",", "\n", "     ", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"c1", " ", "+", " ", "dc"}], ",", " ", "c2"}], "}"}], 
+              ",", "\n", "     ", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"c1", " ", "+", " ", "dc"}], ",", " ", 
+                RowBox[{"c2", " ", "+", " ", "dc"}]}], "}"}], ",", "\n", 
+              "     ", 
+              RowBox[{"{", 
+               RowBox[{"c1", ",", " ", 
+                RowBox[{"c2", " ", "+", " ", "dc"}]}], "}"}]}], "\n", "     ",
+              "}"}], "]"}]}], "\n", "   ", "}"}], "]"}]}], ",", "\n", " ", 
+       RowBox[{"{", 
+        RowBox[{"c1", ",", " ", "0", ",", " ", 
+         RowBox[{"1", " ", "-", " ", "dc"}], ",", " ", "dc"}], "}"}], ",", 
+       "\n", " ", 
+       RowBox[{"{", 
+        RowBox[{"c2", ",", " ", "0", ",", " ", 
+         RowBox[{"1", "-", "c1", "-", "dc"}], ",", " ", "dc"}], "}"}]}], "\n",
+       " ", "]"}], ",", " ", "\n", "\n", "    ", "\n", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", "\n", "\n", "\n", 
+       RowBox[{
+        RowBox[{"Text", "[", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", 
+           RowBox[{
+           "\"\<\\\\color{green}{\\\\mathbf{\\\\left(1,0\\\\right)}}\>\"", 
+            ",", 
+            RowBox[{"FontSize", "\[Rule]", "vel\[CHacek]rk"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"1", "+", "\[Delta]x"}], ",", "0"}], "}"}]}], "]"}], ",", 
+        "\n", "\n", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1", ",", "0"}], "}"}], "]"}], ",", "\n", 
+        RowBox[{"Arrowheads", "[", "velpu\[SHacek]", "]"}], ",", "\n", 
+        RowBox[{"Thickness", "[", "debelina", "]"}], ",", "\n", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "]"}]}], "\n", "}"}], 
+      "]"}], ",", "        ", "\n", "\n", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", "\n", 
+       RowBox[{
+        RowBox[{"Text", "[", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", 
+           RowBox[{
+           "\"\<\\\\color{red}{\\\\mathbf{\\\\left(0,1\\\\right)}}\>\"", ",", 
+            RowBox[{"FontSize", "\[Rule]", "vel\[CHacek]rk"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"1", "+", "\[Delta]y"}]}], "}"}]}], "]"}], ",", "\n", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0", ",", "0"}], "}"}], "]"}], ",", "\n", 
+        RowBox[{"Arrowheads", "[", "velpu\[SHacek]", "]"}], ",", "\n", 
+        RowBox[{"Thickness", "[", "debelina", "]"}], ",", "\n", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}], "}"}], "]"}]}], "\n", "}"}], 
+      "]"}], ",", "      ", "\n", "    ", "\n", "\n", "\n", "\n", "\n", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", "  ", "\n", 
+       RowBox[{
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1", ",", "1"}], "}"}], "]"}], ",", "  ", "\n", 
+        RowBox[{"EdgeForm", "[", "]"}], ",", "\n", 
+        RowBox[{"Polygon", "[", 
+         RowBox[{"{", "\n", "\n", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "razmik"}], ",", "0"}], "}"}], ",", "\n", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "razmik"}], "-", "1"}], ",", "0"}], "}"}], ",", 
+           "\n", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "razmik"}], "-", "1"}], ",", "1"}], "}"}]}], "\n", 
+          "\n", "}"}], "]"}]}], "\n", "}"}], "]"}], ",", "\n", "\n", "    ", 
+     "\n", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", "\n", 
+       RowBox[{
+        RowBox[{"Text", "[", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", 
+           RowBox[{
+           "\"\<\\\\color{green}{\\\\mathbf{\\\\left(1,0\\\\right)}}\>\"", 
+            ",", 
+            RowBox[{"FontSize", "\[Rule]", "vel\[CHacek]rk"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"1", "+", "\[Delta]x", "-", "1", "-", "razmik"}], ",", 
+            "0"}], "}"}]}], "]"}], ",", "\n", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1", ",", "0"}], "}"}], "]"}], ",", "\n", 
+        RowBox[{"Arrowheads", "[", "velpu\[SHacek]", "]"}], ",", "\n", 
+        RowBox[{"Thickness", "[", "debelina", "]"}], ",", "\n", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"0", "-", "1", "-", "razmik"}], ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"1", "-", "1", "-", "razmik"}], ",", "0"}], "}"}]}], 
+          "}"}], "]"}]}], "\n", "}"}], "]"}], ",", "        ", "\n", "\n", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", "\n", "\n", 
+       RowBox[{
+        RowBox[{"Text", "[", 
+         RowBox[{
+          RowBox[{"MaTeX", "[", 
+           RowBox[{
+           "\"\<\\\\color{red}{\\\\mathbf{\\\\left(0,1\\\\right)}}\>\"", ",", 
+            RowBox[{"FontSize", "\[Rule]", "vel\[CHacek]rk"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "1"}], "-", "razmik"}], ",", 
+            RowBox[{"1", "+", "\[Delta]y"}]}], "}"}]}], "]"}], ",", "\n", 
+        RowBox[{"RGBColor", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0", ",", "0"}], "}"}], "]"}], ",", "\n", 
+        RowBox[{"Arrowheads", "[", "velpu\[SHacek]", "]"}], ",", "\n", 
+        RowBox[{"Thickness", "[", "debelina", "]"}], ",", "\n", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "1"}], "-", "razmik"}], ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "1"}], "-", "razmik"}], ",", "1"}], "}"}]}], "}"}],
+          "]"}]}], "\n", "}"}], "]"}], ",", "      ", "\n", "    ", "\n", 
+     RowBox[{"Boxed", " ", "->", " ", "False"}], ",", "\n", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"ViewPoint", "\[Rule]", 
+        RowBox[{"20", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}], ",", 
+           RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}], ",", ".3"}], "}"}]}]}], 
+       ",", "\n", 
+       RowBox[{"ViewVertical", "[", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", " ", "0", ",", " ", "1"}], "}"}], "]"}], ",", "\n", 
+       RowBox[{"SphericalRegion", "\[Rule]", 
+        RowBox[{"Sphere", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", "1"}], "]"}]}], ",",
+        "\n", " ", "\n", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", ",", "}"}], ",", 
+          RowBox[{"{", ",", "}"}], ",", 
+          RowBox[{"{", ",", "}"}]}], "}"}]}], ","}], "*)"}], "\n", 
+     RowBox[{"Background", " ", "->", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1", ",", "1", ",", "0"}], "}"}], "]"}]}], ",", 
+     "\n", 
+     RowBox[{"ImageSize", "\[Rule]", 
+      RowBox[{"4", "*", "1920"}]}]}], "\n", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<c:\\\\Users\\\\gal\\\\Documents\\\\\[CapitalSHacek]OLA\\\\NAR\\\\fiz\\\
+\\rn.avion\[CHacek]ki\\\\grafi\\\\trikotnik na ko\[SHacek]\[CHacek]ke \
+2D.png\>\"", ",", "grafika"}], "]"}], "\n"}], "\n"}], "Code",
+ CellChangeTimes->{{3.8265131747373695`*^9, 3.8265131920023193`*^9}, {
+   3.826513233359539*^9, 3.826513274556223*^9}, {3.826513351320524*^9, 
+   3.826513368419982*^9}, {3.8265134218039255`*^9, 3.82651350745686*^9}, {
+   3.826513599845729*^9, 3.8265136606306577`*^9}, {3.8265137085630817`*^9, 
+   3.8265137558746867`*^9}, {3.8265139476582193`*^9, 
+   3.8265142114098625`*^9}, {3.826514279793263*^9, 3.8265144276063604`*^9}, {
+   3.8265144737873464`*^9, 3.8265144808401413`*^9}, {3.8265145191643734`*^9, 
+   3.8265145513908157`*^9}, {3.8265146859956207`*^9, 
+   3.8265147237563057`*^9}, {3.8265148722525897`*^9, 
+   3.8265148827250414`*^9}, {3.826515498693059*^9, 3.826515548103692*^9}, {
+   3.8265156730371413`*^9, 3.8265156800774965`*^9}, {3.826515742712515*^9, 
+   3.8265159301479864`*^9}, {3.8265159816662607`*^9, 
+   3.8265161027957163`*^9}, {3.8265161638374357`*^9, 3.826516175462438*^9}, {
+   3.8265162212906914`*^9, 3.826516257303398*^9}, {3.8265181312020283`*^9, 
+   3.8265181639323936`*^9}, {3.8265181988899193`*^9, 
+   3.8265182441982317`*^9}, {3.826518277114435*^9, 3.826518350054373*^9}, {
+   3.8265183894009185`*^9, 3.8265183983664813`*^9}, {3.826518437680544*^9, 
+   3.8265184713701963`*^9}, {3.826518541202146*^9, 3.826518555815551*^9}, {
+   3.8265186537823744`*^9, 3.826518680382678*^9}, {3.826518729216115*^9, 
+   3.8265187583884945`*^9}, {3.8265187925336747`*^9, 
+   3.8265188462245502`*^9}, {3.8265188790998297`*^9, 
+   3.8265188791822476`*^9}, {3.826519139982186*^9, 3.826519260880639*^9}, {
+   3.8265192980128293`*^9, 3.8265193257694273`*^9}, {3.826519403659548*^9, 
+   3.82651940443359*^9}, {3.8265195433248887`*^9, 3.826519574655352*^9}, {
+   3.8265196249281197`*^9, 3.8265196313908834`*^9}, {3.82651979290635*^9, 
+   3.8265198290835447`*^9}, {3.8267123633296566`*^9, 
+   3.8267124041961102`*^9}, {3.8267124546456556`*^9, 
+   3.8267125164033318`*^9}, {3.826712547083256*^9, 3.826712597459832*^9}, {
+   3.826713581013646*^9, 3.826713590053398*^9}, {3.826713821294582*^9, 
+   3.826713822295931*^9}, {3.8267139332239695`*^9, 3.8267139468060846`*^9}, 
+   3.8267139969300184`*^9, {3.8267141581262336`*^9, 3.826714215226391*^9}, {
+   3.8267144733651557`*^9, 3.8267144890301113`*^9}, {3.826714537633845*^9, 
+   3.8267145428538465`*^9}, {3.826714595527833*^9, 3.82671464135672*^9}, 
+   3.8267146774180365`*^9, {3.8267147098753643`*^9, 3.8267147309720335`*^9}, {
+   3.8267151050748525`*^9, 3.8267151396645765`*^9}, {3.8267155239730496`*^9, 
+   3.826715535529375*^9}},
+ CellLabel->
+  "In[218]:=",ExpressionUUID->"bc50fcff-75cf-4fd0-b498-3fbd15776310"],
+
+Cell[BoxData["\<\"c:\\\\Users\\\\gal\\\\Documents\\\\\[CapitalSHacek]OLA\\\\\
+NAR\\\\fiz\\\\rn.avion\[CHacek]ki\\\\grafi\\\\trikotnik na ko\[SHacek]\
+\[CHacek]ke 2D.png\"\>"], "Output",
+ CellChangeTimes->{
+  3.8265161764618607`*^9, {3.826516231119547*^9, 3.826516257858906*^9}, 
+   3.8265184892026005`*^9, 3.82651856218332*^9, 3.8265186929859166`*^9, {
+   3.826518750498378*^9, 3.8265187589385614`*^9}, 3.826518808678069*^9, 
+   3.826518847359335*^9, 3.8265188798536625`*^9, 3.8265190685107155`*^9, 
+   3.8265192025154967`*^9, 3.8265192325520344`*^9, 3.826519263262312*^9, 
+   3.826519341221567*^9, 3.8265194108705273`*^9, 3.826519583164958*^9, 
+   3.826519640167667*^9, 3.8265198395225887`*^9, {3.8267126123262863`*^9, 
+   3.8267126196091976`*^9}, 3.8267136030204544`*^9, 3.8267138301962967`*^9, 
+   3.826713952755199*^9, 3.8267142256593213`*^9, 3.8267145079250574`*^9, 
+   3.826714737820834*^9, 3.8267151533579473`*^9, {3.8267155384982204`*^9, 
+   3.826715551553034*^9}},
+ CellLabel->
+  "Out[226]=",ExpressionUUID->"f2edf63d-0529-483e-bb28-ff900445cd08"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<c:\\\\Users\\\\gal\\\\Documents\\\\\[CapitalSHacek]OLA\\\\NAR\\\\fiz\\\
+\\rn.avion\[CHacek]ki\\\\grafi\\\\trikotnik na ko\[SHacek]\[CHacek]ke \
+2D.png\>\"", ",", "%"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8265163771052933`*^9, 3.8265163771062937`*^9}, {
+  3.8265165018571196`*^9, 3.8265165157229495`*^9}, {3.826519132692088*^9, 
+  3.826519132838005*^9}},ExpressionUUID->"708cf61e-3c4a-468c-abc1-\
+08427dff0482"],
+
+Cell[BoxData["\<\"c:\\\\Users\\\\gal\\\\Documents\\\\\[CapitalSHacek]OLA\\\\\
+NAR\\\\fiz\\\\rn.avion\[CHacek]ki\\\\grafi\\\\trikotnik na ko\[SHacek]\
+\[CHacek]ke 2D.pdf\"\>"], "Output",
+ CellChangeTimes->{3.8265165187849226`*^9, 3.8265188839791174`*^9, 
+  3.8265189297347403`*^9, 3.8265190120277233`*^9, 3.8265190714265566`*^9},
+ CellLabel->"Out[68]=",ExpressionUUID->"ccc9d6b4-38cf-4fcc-ab82-ba045d2ede0a"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.826515594291867*^9, 
+  3.8265155991179576`*^9}},ExpressionUUID->"098b4177-5373-4d1d-a9d5-\
+93edfb9f7f36"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.826513770495742*^9, 3.8265137771885543`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"3ef64649-1dfb-452f-ac90-caa43f33b183"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", "1", "0", "1", "0", "1", "0", "1", "0", "1"},
+    {"1", "0", "1", "0", "1", "0", "1", "0", "1", "0"},
+    {"0", "1", "0", "1", "0", "1", "0", "1", "0", "1"},
+    {"1", "0", "1", "0", "1", "0", "1", "0", "1", "0"},
+    {"0", "1", "0", "1", "0", "1", "0", "1", "0", "1"},
+    {"1", "0", "1", "0", "1", "0", "1", "0", "1", "0"},
+    {"0", "1", "0", "1", "0", "1", "0", "1", "0", "1"},
+    {"1", "0", "1", "0", "1", "0", "1", "0", "1", "0"},
+    {"0", "1", "0", "1", "0", "1", "0", "1", "0", "1"},
+    {"1", "0", "1", "0", "1", "0", "1", "0", "1", "0"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.826513778031464*^9},
+ CellLabel->
+  "Out[13]//TableForm=",ExpressionUUID->"c777cc73-25ee-4904-80cf-\
+39eb26ec7f3e"]
+}, Open  ]]
+},
+WindowSize->{1920, 1037},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 9, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0d17e145-0ec4-41d6-9ff0-bc94ff313da4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 12092, 281, 1725, "Code",ExpressionUUID->"bc50fcff-75cf-4fd0-b498-3fbd15776310"],
+Cell[12675, 305, 1056, 16, 1306, "Output",ExpressionUUID->"f2edf63d-0529-483e-bb28-ff900445cd08"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13768, 326, 471, 9, 28, "Input",ExpressionUUID->"708cf61e-3c4a-468c-abc1-08427dff0482"],
+Cell[14242, 337, 407, 5, 32, "Output",ExpressionUUID->"ccc9d6b4-38cf-4fcc-ab82-ba045d2ede0a"]
+}, Open  ]],
+Cell[14664, 345, 154, 3, 28, "Input",ExpressionUUID->"098b4177-5373-4d1d-a9d5-93edfb9f7f36"],
+Cell[CellGroupData[{
+Cell[14843, 352, 209, 3, 28, "Input",ExpressionUUID->"3ef64649-1dfb-452f-ac90-caa43f33b183"],
+Cell[15055, 357, 1098, 26, 197, "Output",ExpressionUUID->"c777cc73-25ee-4904-80cf-39eb26ec7f3e"]
+}, Open  ]]
+}
+]
+*)
+
